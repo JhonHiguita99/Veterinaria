@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Enviar los datos al microservicio
-        const response = await fetch('http://localhost:3000/api/pets', {
+        const response = await fetch('http://44.201.177.44:3000/api/pets', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para cargar las mascotas registradas
     async function loadPets() {
-        const response = await fetch('http://localhost:3000/api/pets');
+        const response = await fetch('http://44.201.177.44:3000/api/pets');
         const pets = await response.json();
 
         const petsTable = document.getElementById('pets-table');
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para eliminar una mascota
     async function deletePet(id) {
-        const response = await fetch(`http://localhost:3000/api/pets/${id}`, {
+        const response = await fetch(`http://44.201.177.44:3000/api/pets/${id}`, {
             method: 'DELETE'
         });
 
